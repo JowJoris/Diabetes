@@ -29,15 +29,15 @@ var pictures = new Vue({
         return true;
       }
       return false;
-    }
-  },
-  pictureClicked: function(i) {
-    if (checkCorrectPicture(i)) {
-      text.textNL += pictures[i].infoNL;
-      text.textTK += pictures[i].infoTK;
-      header.nl = pictues[i].headerNL;
-      header.tk = pictues[i].headerTK;
-      nr++;
+    },
+    pictureClicked: function(i) {
+      if (checkCorrectPicture(i)) {
+        text.textNL += pictures[i].infoNL;
+        text.textTK += pictures[i].infoTK;
+        header.nl = pictues[i].headerNL;
+        header.tk = pictues[i].headerTK;
+        nr++;
+      }
     }
   }
 })
