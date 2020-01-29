@@ -45,7 +45,7 @@ var pictures = new Vue({
 var text = new Vue({
   el: '#text',
   data: {
-    textNL: '',
-    textTK: ''
+    textNL: "",
+    textTK: ""
   }
 })
