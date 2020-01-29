@@ -31,7 +31,7 @@ var pictures = new Vue({
       return false;
     },
     pictureClicked: function(i) {
-      if (checkCorrectPicture(i)) {
+      if (this.checkCorrectPicture(i)) {
         text.textNL += pictures[i].infoNL;
         text.textTK += pictures[i].infoTK;
         header.nl = pictues[i].headerNL;
