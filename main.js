@@ -1,3 +1,5 @@
+var nr = 0;
+
 var header = new Vue({
   el: '#header',
   data: {
@@ -9,10 +11,10 @@ var header = new Vue({
 var pictures = new Vue({
   el: '#pictures',
   data: {
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/800px-Smiley.svg.png',
     pictures: [{
       nr: 1,
       name: 'smiley',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/800px-Smiley.svg.png',
       infoNL: '',
       infoTK: '',
       headerNL: '',
@@ -32,8 +34,21 @@ var pictures = new Vue({
 var text = new Vue({
   el: '#text',
   data: {
-    nr: 0,
     textNL: '',
     textTK: ''
   }
 })
+
+function pictureClicked(i){
+  if(checkCorrectPicture(i)){
+    text.textNL += pictures[i].infoNL;
+    text.textTK += pictures[i].infoTK;
+  }
+}
+
+function checkCorrectPicture(i){
+ if(i == nr){
+   return true;
+ }
+ return false;
+}
