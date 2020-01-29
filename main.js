@@ -29,18 +29,19 @@ var pictures = new Vue({
       headerTK: ''
     }]
   },
-  pictureClicked(i) {
-    if (checkCorrectPicture(i)) {
-      text.textNL += pictures[i].infoNL;
-      text.textTK += pictures[i].infoTK;
+  methods: {
+    pictureClicked: function(i) {
+      if (checkCorrectPicture(i)) {
+        text.textNL += pictures[i].infoNL;
+        text.textTK += pictures[i].infoTK;
+      }
+    },
+    checkCorrectPicture: function(i) {
+      if (i == nr++) {
+        return true;
+      }
+      return false;
     }
-  },
-
-  checkCorrectPicture(i) {
-    if (i == nr++) {
-      return true;
-    }
-    return false;
   }
 })
 
