@@ -1,4 +1,4 @@
-var nr = -1;
+var nr = 0;
 
 var header = new Vue({
   el: '#header',
@@ -25,7 +25,7 @@ var pictures = new Vue({
   },
   methods: {
     checkCorrectPicture: function(i) {
-      if (i == nr++) {
+      if (i == nr) {
         return true;
       }
       return false;
@@ -34,9 +34,9 @@ var pictures = new Vue({
       if (this.checkCorrectPicture(i)) {
         text.textNL += pictures[i].infoNL;
         text.textTK += pictures[i].infoTK;
-        header.nl = pictues[i].headerNL;
-        header.tk = pictues[i].headerTK;
-        nr++;
+        header.nl = pictures.pictures[i].headerNL;
+        header.tk = pictures[i].headerTK;
+        nr = nr+1;
       }
     }
   }
