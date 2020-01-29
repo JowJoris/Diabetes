@@ -3,22 +3,36 @@
 <html>
 
 <head>
-  <title>Diabetes</<title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Diabetes</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <h1>test</h1>
-  <div id="app">
-    <table>
+  <div id="header">
+    <table style="width:100%; text-align:center">
       <tr>
         <td>
-          <h1>{{headerNL}}</h1>
+          <h1>{{nl}}</h1>
         </td>
         <td>
-          <h1>{{headerTK}}</h1>
+          <h1>{{tk}}</h1>
         <td>
       </tr>
     </table>
   </div>
+  <div id="pictures">
+    <table style="width:100%; text-align:center">
+      <tr>
+        <td>
+          <img :src=pictures[0].img">
+        </td>
+        <td>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/800px-Smiley.svg.png">
+        </td>
+      </tr>
+  </div>
+  <script src="main.js"></script>
 </body>
 <html>
