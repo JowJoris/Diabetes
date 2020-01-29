@@ -28,6 +28,19 @@ var pictures = new Vue({
       headerNL: '',
       headerTK: ''
     }]
+  },
+  pictureClicked(i) {
+    if (checkCorrectPicture(i)) {
+      text.textNL += pictures[i].infoNL;
+      text.textTK += pictures[i].infoTK;
+    }
+  },
+
+  checkCorrectPicture(i) {
+    if (i == nr++) {
+      return true;
+    }
+    return false;
   }
 })
 
@@ -38,17 +51,3 @@ var text = new Vue({
     textTK: ''
   }
 })
-
-function pictureClicked(i) {
-  if (checkCorrectPicture(i)) {
-    text.textNL += pictures[i].infoNL;
-    text.textTK += pictures[i].infoTK;
-  }
-}
-
-function checkCorrectPicture(i) {
-  if (i == nr++) {
-    return true;
-  }
-  return false;
-}
