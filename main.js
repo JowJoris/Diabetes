@@ -13,7 +13,7 @@ var pictures = new Vue({
   data: {
     pictures: [{
       infoNL: 'Welkom bij deze interactieve website met informatie over diabetes. \n' +
-      'Ik Ceres Jansen en ? van de opleiding HBO-V willen met behulp van deze meer informatie verlenen over diabetes',
+      'Ik Ceres Jansen en Dominique de Winter van de opleiding HBO-V willen met behulp van deze site meer informatie verlenen over diabetes',
       infoTK: '1',
       headerNL: 'Klik op de insulinepen',
       headerTK: 'İnsülin kalemine tıklayın'
