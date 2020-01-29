@@ -47,7 +47,7 @@ function pictureClicked(i) {
 }
 
 function checkCorrectPicture(i) {
-  if (i == nr) {
+  if (i == nr++) {
     return true;
   }
   return false;
