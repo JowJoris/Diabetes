@@ -24,20 +24,20 @@ var pictures = new Vue({
     }]
   },
   methods: {
-    pictureClicked: function(i) {
-      if (checkCorrectPicture(i)) {
-        text.textNL += pictures[i].infoNL;
-        text.textTK += pictures[i].infoTK;
-        header.nl = pictues[i].headerNL;
-        header.tk = pictues[i].headerTK;
-        nr++;
-      }
-    },
     checkCorrectPicture: function(i) {
       if (i == nr++) {
         return true;
       }
       return false;
+    }
+  },
+  pictureClicked: function(i) {
+    if (checkCorrectPicture(i)) {
+      text.textNL += pictures[i].infoNL;
+      text.textTK += pictures[i].infoTK;
+      header.nl = pictues[i].headerNL;
+      header.tk = pictues[i].headerTK;
+      nr++;
     }
   }
 })
