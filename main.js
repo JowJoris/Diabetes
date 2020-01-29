@@ -39,16 +39,16 @@ var text = new Vue({
   }
 })
 
-function pictureClicked(i){
-  if(checkCorrectPicture(i)){
+function pictureClicked(i) {
+  if (checkCorrectPicture(i)) {
     text.textNL += pictures[i].infoNL;
     text.textTK += pictures[i].infoTK;
   }
 }
 
-function checkCorrectPicture(i){
- if(i == nr){
-   return true;
- }
- return false;
+function checkCorrectPicture(i) {
+  if (i == nr) {
+    return true;
+  }
+  return false;
 }
