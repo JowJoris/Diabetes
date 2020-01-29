@@ -1,4 +1,4 @@
-var nr = 0;
+var nr = -1;
 
 var header = new Vue({
   el: '#header',
@@ -11,22 +11,16 @@ var header = new Vue({
 var pictures = new Vue({
   el: '#pictures',
   data: {
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/800px-Smiley.svg.png',
     pictures: [{
-      nr: 1,
-      name: 'smiley',
-      infoNL: '',
-      infoTK: '',
-      headerNL: '',
-      headerTK: ''
+      infoNL: '1',
+      infoTK: '1',
+      headerNL: '1',
+      headerTK: '1'
     }, {
-      nr: 2,
-      name: 'insulinepen',
-      img: 'https://www.diabetescentrale.nl/sites/default/files/styles/product_full/public/products/novopen_5_-_grijs.jpg?itok=OqOBqbap',
-      infoNL: '',
-      infoTK: '',
-      headerNL: '',
-      headerTK: ''
+      infoNL: '2',
+      infoTK: '2',
+      headerNL: '2',
+      headerTK: '2'
     }]
   },
   methods: {
@@ -34,6 +28,9 @@ var pictures = new Vue({
       if (checkCorrectPicture(i)) {
         text.textNL += pictures[i].infoNL;
         text.textTK += pictures[i].infoTK;
+        header.nl = pictues[i].headerNL;
+        header.tk = pictues[i].headerTK;
+        nr++;
       }
     },
     checkCorrectPicture: function(i) {
