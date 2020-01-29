@@ -33,8 +33,8 @@ var pictures = new Vue({
     },
     pictureClicked: function(i) {
       if (this.checkCorrectPicture(i)) {
-        text.textNL += this.pictures[i].infoNL;
-        text.textTK += this.pictures[i].infoTK;
+        text.nl += this.pictures[i].infoNL;
+        text.tk += this.pictures[i].infoTK;
         header.nl = this.pictures[i].headerNL;
         header.tk = this.pictures[i].headerTK;
         nr = nr+1;
@@ -46,7 +46,7 @@ var pictures = new Vue({
 var text = new Vue({
   el: '#text',
   data: {
-    textNL: "",
-    textTK: ""
+    nl: "testNL",
+    tk: "testTK"
   }
 })
