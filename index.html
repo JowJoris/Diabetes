@@ -14,10 +14,10 @@
     <table style="width:100%; text-align:center">
       <tr>
         <td>
-          <h1>{{nl}}</h1>
+          <h1 v-html="nl"></h1>
         </td>
         <td>
-          <h1>{{tk}}</h1>
+          <h1 v-html="tk"></h1>
         <td>
       </tr>
     </table>
@@ -26,12 +26,33 @@
     <table style="width:100%; text-align:center">
       <tr>
         <!-- Smiley -->
-        <td v-on:click="pictureClicked(0)">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/800px-Smiley.svg.png">
+        <td v-on:click="pictureClicked(5)">
+          <img src="pictures/5.png">
         </td>
         <!-- Epipen -->
+        <td v-on:click="pictureClicked(2)">
+          <img src='pictures/2.png'>
+        </td>
+      </tr>
+      <tr>
+        <td v-on:click="pictureClicked(4)">
+          <img src='pictures/4.png'>
+        </td>
+        <td v-on:click="pictureClicked(0)">
+          <img src='pictures/0.png'>
+        </td>
+      </tr>
+      <tr>
+        <td v-on:click="pictureClicked(3)">
+          <img src='pictures/3.png'>
+        </td>
+        <td v-on:click="pictureClicked(6)">
+          <img src='pictures/6.png'>
+        </td>
+      </tr>
+      <tr>
         <td v-on:click="pictureClicked(1)">
-          <img src='https://www.diabetescentrale.nl/sites/default/files/styles/product_full/public/products/novopen_5_-_grijs.jpg?itok=OqOBqbap'>
+          <img src='pictures/1.png'>
         </td>
       </tr>
     </table>
@@ -40,10 +61,10 @@
     <table style="width:100%; text-align:center">
       <tr>
         <td>
-          <p>{{nl}}</p>
+          <p v-html="nl"></p>
         </td>
         <td>
-          <p>{{tk}}</p>
+          <p v-html="tk"></p>
         </td>
       </tr>
     </table>
